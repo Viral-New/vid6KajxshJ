@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+<title>The Internet Be Wild</title>
+<style id='page-skin-1' type='text/css'><!--
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+html,body{
+background:#050505;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+overflow-x:hidden;
+color:#fff;
+}
+/* BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#ff005522,transparent 35%),
+radial-gradient(circle at bottom,#0055ff22,transparent 35%);
+z-index:-1;
+}
+/* PAGE */
+.page{
+width:100%;
+max-width:480px;
+margin:auto;
+min-height:100vh;
+padding-bottom:50px;
+}
+/* HEADER */
+.header{
+padding:18px;
+}
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:1px;
+}
+.logo span{
+color:#ff2f6d;
+}
+.sub{
+margin-top:6px;
+color:#999;
+font-size:13px;
+}
+/* VIDEO CARD */
+.video-card{
+margin:12px;
+background:#111;
+border-radius:24px;
+overflow:hidden;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.05),
+0 20px 40px rgba(0,0,0,0.45);
+}
+/* VIDEO */
+.video-box{
+position:relative;
+background:#000;
+min-height:250px; /* Menjaga tinggi awal saat loading */
+}
+video{
+width:100%;
+max-height:75vh;
+display:block;
+object-fit:contain;
+background:#000;
+}
+.video-box::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:120px;
+background:linear-gradient(to top,#000000dd,transparent);
+pointer-events:none;
+}
+/* VIDEO LOADER */
+#videoLoader {
+position:absolute;
+inset:0;
+background:#000;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:15px;
+font-weight:600;
+letter-spacing:0.5px;
+z-index:10;
+}
+/* BADGE */
+.badge{
+position:absolute;
+top:12px;
+left:12px;
+background:#ff2f6d;
+padding:8px 12px;
+border-radius:50px;
+font-size:12px;
+font-weight:700;
+z-index:5;
+box-shadow:0 5px 15px rgba(255,0,102,0.4);
+}
+/* INFO */
+.video-info{
+padding:16px;
+}
+.video-title{
+font-size:20px;
+font-weight:700;
+line-height:1.4;
+}
+.video-desc{
+margin-top:10px;
+color:#aaa;
+font-size:14px;
+line-height:1.6;
+}
+.stats{
+display:flex;
+gap:14px;
+margin-top:14px;
+color:#ccc;
+font-size:13px;
+flex-wrap:wrap;
+}
+/* BUTTONS */
+.actions{
+display:flex;
+gap:10px;
+margin-top:18px;
+}
+.btn{
+flex:1;
+border:none;
+border-radius:16px;
+padding:15px;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+transition:0.25s;
+}
+.btn-primary{
+background:linear-gradient(135deg,#ff2f6d,#ff0066);
+color:#fff;
+box-shadow:0 10px 25px rgba(255,0,102,0.35);
+}
+.btn-primary:hover{
+transform:translateY(-2px);
+}
+.btn-secondary{
+background:#1b1b1b;
+color:#fff;
+}
+/* SECTION */
+.section-title{
+padding:18px 16px 10px;
+font-size:18px;
+font-weight:700;
+}
+/* ADS */
+.ads-card{
+margin:12px;
+background:#121212;
+border-radius:20px;
+padding:14px;
+border:1px solid rgba(255,255,255,0.05);
+overflow:hidden;
+}
+.ads-label{
+color:#777;
+font-size:11px;
+text-transform:uppercase;
+margin-bottom:12px;
+letter-spacing:1px;
+}
+/* FOOTER */
+.footer{
+text-align:center;
+color:#666;
+font-size:12px;
+padding:30px 15px;
+}
+/* MOBILE */
+@media(max-width:480px){
+.video-title{ font-size:18px; }
+}
+
+--></style>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<script src="https://gasptournament.com/03/d4/31/03d4314a36b3fe0fcad53ee8f49d810d.js"></script>
+
+</head>
+<body>
+<!-- Section Wajib Blogger (Disembunyikan agar tampilan tidak rusak) -->
+<div class='no-items section' id='dummy-section'></div>
+<div class='page'>
+<!-- HEADER -->
+<div class='header'>
+<div class='logo'>
+    VIDEY <span>YOU</span>
+</div>
+<div class='sub'>
+    Watch trending viral videos everyday 🔥
+  </div>
+</div>
+<!-- VIDEO CARD -->
+<div class='video-card'>
+<div class='video-box'>
+<!-- LAYAR LOADING -->
+<div id='videoLoader'>Video load in 1 second...</div>
+<video controls='controls' controlsList='nodownload noremoteplayback' disablePictureInPicture='disablePictureInPicture' id='player' muted='muted' playsinline='playsinline' poster='https://via.placeholder.com/480x720?text=Loading...' preload='metadata'>
+<source id='videoSource' src='' type='video/mp4'></source>
+</video>
+</div>
+<div class='video-info'>
+<div class='video-title'>
+      Hot Trending Video Tonight 😍
+    </div>
+<div class='video-desc'>
+      Watch the latest viral content people are talking about right now.
+    </div>
+<div class='stats'>
+<div>👁 2.4M Views</div>
+<div>&#10084;&#65039; 183K Likes</div>
+<div>🔥 Trending</div>
+</div>
+<!-- BUTTONS -->
+<div class='actions'>
+<button class='btn btn-primary' id='watchBtn'>
+        &#9654; Watch More
+      </button>
+<button class='btn btn-secondary' id='downloadBtn'>
+        &#11015; Download
+      </button>
+</div>
+  <script>
+  atOptions = {
+    'key' : 'd0b252b8a21746457675a7eee618216c',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://gasptournament.com/d0b252b8a21746457675a7eee618216c/invoke.js"></script>
+
+</div>
+</div>
+<!-- TRENDING -->
+<div class='section-title'>
+  🔥 Trending Videos
+</div>
+<!-- PROFITON NATIVE -->
+<div class='ads-card'>
+<script async="async" data-cfasync="false" src="https://gasptournament.com/178c4119a0b0fb7049040fd773f14771/invoke.js"></script>
+<div id="container-178c4119a0b0fb7049040fd773f14771"></div>
+</div>
+<!-- PROFITON SMARTLINK -->
+<script>
+  atOptions = {
+    'key' : '9e6ba39d93b4e068261ed057bc3b3c35',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/9e6ba39d93b4e068261ed057bc3b3c35/invoke.js"></script>
+
+</div>
+<!-- FOOTER -->
+<div class='footer'>
+  &#169; 2026 Viral Media &#8226; All Rights Reserved
+  <script>
+  atOptions = {
+    'key' : '872a98bb5be6ca16fb21f05b9b04c38e',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://gasptournament.com/872a98bb5be6ca16fb21f05b9b04c38e/invoke.js"></script>
+
+  </div>
+  
+</div>
+<script type='text/javascript'>
+//<![CDATA[
+(function () {
+
+  /* =========================
+     SMARTLINK
+  ========================= */
+  const smartlink = "https://shorturl.at/NR4w2";
+
+  /* WATCH MORE & DOWNLOAD */
+  document.getElementById("watchBtn").addEventListener("click", function () {
+    window.open(smartlink, "_blank");
+  });
+
+  document.getElementById("downloadBtn").addEventListener("click", function () {
+    window.open(smartlink, "_blank");
+  });
+
+  /* =========================
+     VIDEO PARAM
+  ========================= */
+  const params = new URLSearchParams(window.location.search);
+  let video = params.get("v");
+
+  if (!video) {
+      video = "t0Ya8oBH1";
+  }
+  if (!video.startsWith("http")) {
+      video = "https://cdn.videy.co/" + video;
+  }
+  if (!video.endsWith(".mp4")) {
+      video += ".mp4";
+  }
+
+  const player = document.getElementById("player");
+  const source = document.getElementById("videoSource");
+  const loader = document.getElementById("videoLoader");
+
+  // Masukkan URL Video ke elemen source
+  source.src = video;
+  
+  // Load metadata video ke player
+  player.load();
+
+  // Sembunyikan loading setelah metadata video siap.
+  // Video TIDAK akan autoplay; pengguna harus menekan tombol Play.
+  player.addEventListener("loadedmetadata", function() {
+    loader.style.display = "none";
+  });
+
+  // Pastikan autoplay tidak dijalankan oleh JavaScript.
+  player.autoplay = false;
+
+  // Disable klik kanan
+  player.addEventListener("contextmenu", e => e.preventDefault());
+
+  })();
+//]]>
+</script>
+<!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5044824,4,9,110,60,00011111']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5044824&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+<script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/4033524873-widgets.js"></script>
+<script type='text/javascript'>
+window['__wavt'] = 'ACvIOeAtbfzBtI3K9LWImbs0qQHc:1786163970496';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d7685413291112307731','//theinternetbewild.blogspot.com/','7685413291112307731');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '7685413291112307731', 'title': 'The Internet Be Wild', 'url': 'https://theinternetbewild.blogspot.com/', 'canonicalUrl': 'https://theinternetbewild.blogspot.com/', 'homepageUrl': 'https://theinternetbewild.blogspot.com/', 'searchUrl': 'https://theinternetbewild.blogspot.com/search', 'canonicalHomepageUrl': 'https://theinternetbewild.blogspot.com/', 'blogspotFaviconUrl': 'https://theinternetbewild.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'id', 'localeUnderscoreDelimited': 'id', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'isDynamicViewsAvailable': true, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22The Internet Be Wild - Atom\x22 href\x3d\x22https://theinternetbewild.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22The Internet Be Wild - RSS\x22 href\x3d\x22https://theinternetbewild.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22The Internet Be Wild - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/7685413291112307731/posts/default\x22 /\x3e\n', 'meTag': '\x3clink rel\x3d\x22me\x22 href\x3d\x22https://www.blogger.com/profile/05060423180134818019\x22 /\x3e\n', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'adsenseAutoAds': false, 'boqCommentIframeForm': true, 'loginRedirectParam': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/3db55d8de4fe007f', 'plusOneApiSrc': 'https://apis.google.com/js/platform.js', 'disableGComments': true, 'interstitialAccepted': false, 'sharing': {'platforms': [{'name': 'Dapatkan link', 'key': 'link', 'shareMessage': 'Dapatkan link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Bagikan ke Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'X', 'key': 'twitter', 'shareMessage': 'Bagikan ke X', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Bagikan ke Pinterest', 'target': 'pinterest'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'disableGooglePlus': true, 'googlePlusShareButtonWidth': 0, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27id\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Baca selengkapnya', 'pageType': 'index', 'pageName': '', 'pageTitle': 'The Internet Be Wild'}}, {'name': 'features', 'data': {}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Tautan disalin ke papan klip!', 'ok': 'Oke', 'postLink': 'Tautan Pos'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Khusus', 'isResponsive': true, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'The Internet Be Wild', 'description': '', 'url': 'https://theinternetbewild.blogspot.com/', 'type': 'feed', 'isSingleItem': false, 'isMultipleItems': true, 'isError': false, 'isPage': false, 'isPost': false, 'isHomepage': true, 'isArchive': false, 'isLabelSearch': false}}, {'name': 'widgets', 'data': [{'title': 'The Internet Be Wild (Header)', 'type': 'Header', 'sectionId': 'dummy-section', 'id': 'Header1'}, {'title': 'Cari Blog Ini', 'type': 'BlogSearch', 'sectionId': 'dummy-section', 'id': 'BlogSearch1'}, {'type': 'Attribution', 'sectionId': 'dummy-section', 'id': 'Attribution1'}, {'title': '', 'type': 'ReportAbuse', 'sectionId': 'dummy-section', 'id': 'ReportAbuse1'}, {'title': '', 'type': 'PopularPosts', 'sectionId': 'dummy-section', 'id': 'PopularPosts1', 'posts': []}, {'title': 'Mengenai Saya', 'type': 'Profile', 'sectionId': 'dummy-section', 'id': 'Profile1'}, {'title': 'Postingan Blog', 'type': 'Blog', 'sectionId': 'dummy-section', 'id': 'Blog1', 'posts': [], 'headerByline': {'regionName': 'header1', 'items': [{'name': 'share', 'label': ''}, {'name': 'timestamp', 'label': ''}]}, 'footerBylines': [{'regionName': 'footer1', 'items': [{'name': 'comments', 'label': 'komentar'}, {'name': 'icons', 'label': ''}]}, {'regionName': 'footer2', 'items': [{'name': 'labels', 'label': ''}]}, {'regionName': 'footer3', 'items': [{'name': 'location', 'label': 'Lokasi:'}]}], 'allBylineItems': [{'name': 'share', 'label': ''}, {'name': 'timestamp', 'label': ''}, {'name': 'comments', 'label': 'komentar'}, {'name': 'icons', 'label': ''}, {'name': 'labels', 'label': ''}, {'name': 'location', 'label': 'Lokasi:'}]}]}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'dummy-section', document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogSearchView', new _WidgetInfo('BlogSearch1', 'dummy-section', document.getElementById('BlogSearch1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'dummy-section', document.getElementById('Attribution1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ReportAbuseView', new _WidgetInfo('ReportAbuse1', 'dummy-section', document.getElementById('ReportAbuse1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'dummy-section', document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'dummy-section', document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'dummy-section', document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'navMessage': 'Tidak ada postingan.', 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/402556335-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/828616780-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+  
+<script src="https://gasptournament.com/df/dd/b3/dfddb3bcc661e854a603b1b1b11ddb6b.js"></script>
+
+</body>
+</html>
