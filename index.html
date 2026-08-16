@@ -220,7 +220,7 @@ padding:30px 15px;
 <div class='video-box'>
 <!-- LAYAR LOADING -->
 <div id='videoLoader'>Video load in 1 second...</div>
-<video controls='controls' controlsList='nodownload noremoteplayback' disablePictureInPicture='disablePictureInPicture' id='player' muted='muted' playsinline='playsinline' poster='https://via.placeholder.com/480x720?text=Loading...' preload='metadata'>
+<video controls='controls' controlsList='nodownload noremoteplayback' disablePictureInPicture='disablePictureInPicture' id='player' playsinline='playsinline' poster='https://via.placeholder.com/480x720?text=Thumbnail' preload='metadata'>
 <source id='videoSource' src='' type='video/mp4'></source>
 </video>
 </div>
@@ -321,6 +321,11 @@ padding:30px 15px;
   const params = new URLSearchParams(window.location.search);
   let video = params.get("v");
 
+  // URL thumbnail. Bisa diganti lewat ?thumb=URL_FOTO
+  // Contoh: ?v=t0Ya8oBH1&thumb=https://domain.com/foto.jpg
+  const thumbnail = params.get("thumb") ||
+      "https://i.ibb.co.com/21FWbT3k/Screenshot-2026-08-17-062544.png";
+
   if (!video) {
       video = "t0Ya8oBH1";
   }
@@ -338,16 +343,19 @@ padding:30px 15px;
   // Masukkan URL Video ke elemen source
   source.src = video;
   
+  // Pasang thumbnail sebelum video diputar
+  player.poster = thumbnail;
+
   // Load metadata video ke player
   player.load();
 
-  // Sembunyikan loading setelah metadata video siap.
-  // Video TIDAK akan autoplay; pengguna harus menekan tombol Play.
+  // Sembunyikan loading setelah video siap.
+  // Thumbnail tetap tampil sampai pengguna menekan Play.
   player.addEventListener("loadedmetadata", function() {
     loader.style.display = "none";
   });
 
-  // Pastikan autoplay tidak dijalankan oleh JavaScript.
+  // Pastikan video tidak autoplay.
   player.autoplay = false;
 
   // Disable klik kanan
