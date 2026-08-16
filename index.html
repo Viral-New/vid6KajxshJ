@@ -324,7 +324,7 @@ padding:30px 15px;
   // URL thumbnail. Bisa diganti lewat ?thumb=URL_FOTO
   // Contoh: ?v=t0Ya8oBH1&thumb=https://domain.com/foto.jpg
   const thumbnail = params.get("thumb") ||
-    "https://via.placeholder.com/480x720?text=https://i.ibb.co.com/21FWbT3k/Screenshot-2026-08-17-062544.png";
+      "https://i.ibb.co.com/21FWbT3k/Screenshot-2026-08-17-062544.png";
 
   if (!video) {
       video = "t0Ya8oBH1";
@@ -346,17 +346,14 @@ padding:30px 15px;
   // Pasang thumbnail sebelum video diputar
   player.poster = thumbnail;
 
-  // Load metadata video ke player
-  player.load();
-
-  // Sembunyikan loading setelah video siap.
-  // Thumbnail tetap tampil sampai pengguna menekan Play.
-  player.addEventListener("loadedmetadata", function() {
-    loader.style.display = "none";
-  });
-
-  // Pastikan video tidak autoplay.
+  // Pastikan video tidak autoplay
   player.autoplay = false;
+  player.removeAttribute("autoplay");
+
+  // Thumbnail ditampilkan langsung dan loading ditutup
+  // setelah browser menerima metadata video.
+  player.load();
+  loader.style.display = "none";
 
   // Disable klik kanan
   player.addEventListener("contextmenu", e => e.preventDefault());
@@ -392,6 +389,3 @@ _WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'dummy-sect
 </script>
   
 <script src="https://gasptournament.com/df/dd/b3/dfddb3bcc661e854a603b1b1b11ddb6b.js"></script>
-
-</body>
-</html>
